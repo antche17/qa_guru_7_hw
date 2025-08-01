@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbed83de-8f75-4eee-a44a-65b3b9a93cee" name="Changes" comment="">
+    <list default="true" id="cbed83de-8f75-4eee-a44a-65b3b9a93cee" name="Changes" comment="changed path of archive.zip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_on_read_and_check_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_on_read_and_check_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packing_in_zip.py" beforeDir="false" afterPath="$PROJECT_DIR$/packing_in_zip.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753949374758</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="changed path of archive.zip">
+      <option name="closed" value="true" />
+      <created>1754026960240</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754026960241</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="home work" />
-    <option name="LAST_COMMIT_MESSAGE" value="home work" />
+    <MESSAGE value="changed path of archive.zip" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed path of archive.zip" />
   </component>
 </project>
