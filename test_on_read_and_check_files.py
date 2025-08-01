@@ -2,15 +2,19 @@ import csv
 import io
 import zipfile
 from io import TextIOWrapper
+from pathlib import Path
 from openpyxl import load_workbook
 from pypdf import PdfReader
 
-with zipfile.ZipFile("/Users/antche/PycharmProjects/qa_guru/qa_guru_7_hw/archive.zip") as zip_file: # открываем архив
-    print(zip_file.namelist()) # печатаем названия файлов в архиве
+BASE_DIR = Path(__file__).parent
+ARCHIVE_PATH = BASE_DIR / "archive.zip"
+
+with zipfile.ZipFile(ARCHIVE_PATH) as zip_file:
+    print(zip_file.namelist())
 
 
 def test_csv():
-    with zipfile.ZipFile("/Users/antche/PycharmProjects/qa_guru/qa_guru_7_hw/archive.zip") as zip_file:
+    with zipfile.ZipFile(ARCHIVE_PATH) as zip_file:
         with zip_file.open('example.csv') as csv_file:
             csvreader = list(csv.reader(TextIOWrapper(csv_file, 'utf-8-sig')))
             second_row = csvreader[1]
@@ -20,7 +24,7 @@ def test_csv():
 test_csv()
 
 def test_xlsx():
-    with zipfile.ZipFile("/Users/antche/PycharmProjects/qa_guru/qa_guru_7_hw/archive.zip") as zip_file:
+    with zipfile.ZipFile(ARCHIVE_PATH) as zip_file:
         with zip_file.open('example.xlsx') as xlsx_file:
             in_memory_xlsx = io.BytesIO(xlsx_file.read())
             workbook = load_workbook(in_memory_xlsx)
@@ -32,7 +36,7 @@ def test_xlsx():
 test_xlsx()
 
 def test_pdf():
-    with zipfile.ZipFile("/Users/antche/PycharmProjects/qa_guru/qa_guru_7_hw/archive.zip") as zip_file:
+    with zipfile.ZipFile(ARCHIVE_PATH) as zip_file:
         with zip_file.open('example.pdf') as pdf_file:
             reader = PdfReader(pdf_file)
             text = reader.pages[0].extract_text()
